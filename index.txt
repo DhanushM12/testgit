@@ -1,0 +1,7 @@
+> git init
+> git add .
+> git commit -m "msg to commit"
+> git push
+> git remote add origin https://github.com/DhanushM12/testgit.git
+> git pull
+> git clone https://github.com/DhanushM12/PollingApi.git
