@@ -4,4 +4,108 @@
 > git push
 > git remote add origin https://github.com/DhanushM12/testgit.git
 > git pull
-> git clone https://github.com/DhanushM12/PollingApi.git
+> git clone https://github.com/DhanushM12/testgit.git
+
+devA, devB
+9AM
+
+devA - featureA
+
+main/develop/master
+
+main > git pull
+main > git checkout -b featureA
+featureA > git add .
+featureA > git commit -m "featureA work is completed"
+featureA > git push
+
+Pull request -> github / merge request  -> Gitlab
+difference of code between your featureA and main branch
+Approve -> merge 
+Merge to the main branch - 2pm
+
+develop -> master
+CICD STAGES -> deploy to dev, deploy to qa (yaml)
+dev qa preprod prod
+
+release -> featureA
+
+release to master (prod) -> pull request
+
+difference between release branch and master branch
+
+devB  - 9am
+
+main > git pull
+main > git checkout -b featureB
+featureB > git add .
+featureB > git commit -m "featureB work is completed"
+featureB > git push
+
+
+5pm
+Pull request -> github / merge request  -> Gitlab
+difference of code between your featureB and main branch
+Rebase
+
+
+9am
+index.js -main
+1. a
+
+2pm 
+index.js - main
+1. a
+2. b
+
+5pm
+index.js - featureB -> main
+1. a
+2. c
+
+
+1000 -> withdraws (800) 200 
+-> 1000
+
+Solve Rebase
+featureB > git checkout -b main
+main > git pull
+main > git checkout -b featureB
+featureB > git merge main
+
+1. No merge conflicts
+
+featureB > git push
+Pull request
+difference of code between your featureB and main branch
+Approve -> merge
+featureB code will be merged to main branch
+
+
+2. Merge conflicts
+index.js - main
+1. a
+2. b
+
+index.js - featureB
+1. a
+2. c
+
+index.js
+1. a
+2. b
+Accept Incoming | Accept current | Accept both | Cancel both
+2. c
+
+index.js
+1. a
+2. b
+3. c
+
+featureB > git add .
+featureB > git commit -m "solved merge conflicts"
+featureB > git push
+Pull request
+difference of code between your featureB and main branch
+Approve -> merge
+featureB code will be merged to main branch
